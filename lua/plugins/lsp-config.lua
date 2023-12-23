@@ -15,6 +15,10 @@ return {
   },
   {
     'neovim/nvim-lspconfig',
+    dependencies = {
+      {'j-hui/fidget.nvim', opts = {}},
+      'folke/neodev.nvim',
+    },
     config = function()
       local lspconfig = require('lspconfig')
       lspconfig.lua_ls.setup({})
